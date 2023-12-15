@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:t_ecommerce/features/authentication/login/screen/login_screen.dart';
+import 'package:t_ecommerce/features/authentication/screen/login/login_screen.dart';
 
 class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find();

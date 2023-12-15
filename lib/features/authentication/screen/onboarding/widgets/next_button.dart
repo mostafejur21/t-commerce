@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_ecommerce/features/onboarding/controller/onboarding_controller.dart';
 import 'package:t_ecommerce/utils/constants/colors.dart';
 import 'package:t_ecommerce/utils/constants/sizes.dart';
 import 'package:t_ecommerce/utils/device/device_utility.dart';
 import 'package:t_ecommerce/utils/helpers/helper_functions.dart';
+
+import '../../../controllers/onboarding_controller.dart';
 
 class CircleButton extends StatelessWidget {
   const CircleButton({
