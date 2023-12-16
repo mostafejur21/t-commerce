@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_ecommerce/common/widgets/login_or_signup/login_divider.dart';
 import 'package:t_ecommerce/common/widgets/login_or_signup/login_social_button.dart';
+import 'package:t_ecommerce/features/authentication/screen/signup/verify_email_screen.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/widgets/agree_t&c.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/widgets/signup_form.dart';
 import 'package:t_ecommerce/utils/constants/sizes.dart';
@@ -45,7 +46,7 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const VerifyEmailScreen()),
                   child: Text(TTexts.createAccount.toUpperCase()),
                 ),
               ),
@@ -68,4 +69,3 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 }
-
