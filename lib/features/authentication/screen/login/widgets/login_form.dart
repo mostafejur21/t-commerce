@@ -66,7 +66,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to(() => const BottomNavigationMenu()),
+                onPressed: () => Get.off(() => const BottomNavigationMenu()),
                 child: const Text(TTexts.signIn),
               ),
             ),

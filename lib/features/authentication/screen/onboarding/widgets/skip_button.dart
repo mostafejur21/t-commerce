@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:t_ecommerce/features/authentication/controllers/onboarding_controller.dart';
+import 'package:get/get.dart';
+import 'package:t_ecommerce/features/authentication/screen/login/login_screen.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
@@ -16,7 +17,7 @@ class SkipButton extends StatelessWidget {
       right: TSizes.defaultSpace,
       child: TextButton(
         onPressed: () {
-          OnboardingController.instance.skipPage();
+          Get.off(() => const LoginScreen());
         },
         child: const Text("Skip"),
       ),
