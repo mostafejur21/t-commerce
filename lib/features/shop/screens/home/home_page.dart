@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_ecommerce/common/widgets/custom_search_bar.dart';
 import 'package:t_ecommerce/common/widgets/custom_shape/custom_container/primary_header_container.dart';
+import 'package:t_ecommerce/common/widgets/section_heading.dart';
 import 'package:t_ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:t_ecommerce/features/shop/screens/home/widgets/home_carousal_slider.dart';
 import 'package:t_ecommerce/features/shop/screens/home/widgets/home_category_list_view.dart';
+import 'package:t_ecommerce/utils/constants/image_strings.dart';
 import 'package:t_ecommerce/utils/constants/sizes.dart';
-
-import '../../../../common/widgets/custom_search_bar.dart';
-import '../../../../common/widgets/section_heading.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -46,11 +47,19 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: HomeSlider(
+                banners: [
+                  TImages.promoBanner1,
+                  TImages.promoBanner2,
+                  TImages.promoBanner3
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
