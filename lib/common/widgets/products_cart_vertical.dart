@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_ecommerce/common/style/shadow_style.dart';
-import 'package:t_ecommerce/common/widgets/RoundedImagesContainer.dart';
+import 'package:t_ecommerce/common/widgets/brand_text_with_verify_icon.dart';
 import 'package:t_ecommerce/common/widgets/custom_shape/custom_container/circular_container.dart';
+import 'package:t_ecommerce/common/widgets/images/rounded_image.dart';
 import 'package:t_ecommerce/common/widgets/products_title_text.dart';
 import 'package:t_ecommerce/utils/constants/colors.dart';
 import 'package:t_ecommerce/utils/constants/image_strings.dart';
@@ -70,36 +71,19 @@ class ProductsCartVertical extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductsTitleText(
+                  ProductsTitleText(
                     title: 'Green Nike Air shoe',
                     smallSizes: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: TSizes.sm,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      ),
-                    ],
-                  ),
+                  BrandTitleWithVerifyIcon(title: 'Nike',),
                 ],
               ),
             ),

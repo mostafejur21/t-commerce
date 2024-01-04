@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_ecommerce/features/shop/screens/home/home_page.dart';
+import 'package:t_ecommerce/features/shop/screens/store/store_screen.dart';
 import 'package:t_ecommerce/utils/constants/colors.dart';
 import 'package:t_ecommerce/utils/helpers/helper_functions.dart';
 
@@ -39,5 +40,5 @@ class BottomNavigationMenu extends StatelessWidget {
 
 class BottomNavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screen = [HomePage(), HomePage(), HomePage(), HomePage()];
+  final screen = [const HomePage(), const StoreScreen(), const HomePage(), const HomePage()];
 }

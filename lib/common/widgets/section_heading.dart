@@ -6,7 +6,7 @@ class SectionHeader extends StatelessWidget {
   const SectionHeader({
     super.key,
     required this.title,
-    this.buttonTitle = "Viwe All",
+    this.buttonTitle = "View All",
     this.showButton = false,
     this.textColor,
     this.onPressed,

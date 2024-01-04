@@ -4,7 +4,7 @@ import 'package:iconsax/iconsax.dart';
 class CustomCartCounterIcon extends StatelessWidget {
   const CustomCartCounterIcon({
     super.key,
-    required this.iconColor,
+    this.iconColor,
     required this.onPressed,
   });
   final Color? iconColor;

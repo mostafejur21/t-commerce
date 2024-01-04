@@ -14,11 +14,13 @@ class CustomSearchBar extends StatelessWidget {
     required this.showBackground,
     required this.showBorder,
     this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
+  final EdgeInsetsGeometry padding;
   final void Function()? onTap;
 
   @override
@@ -28,7 +30,7 @@ class CustomSearchBar extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(TSizes.md),
