@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
 class RoundedImageContainer extends StatelessWidget {
@@ -11,7 +10,7 @@ class RoundedImageContainer extends StatelessWidget {
     required this.imageUrl,
     this.applyImageRadius = true,
     this.border,
-    this.backgroundColor = TColors.light,
+    this.backgroundColor,
     this.fit = BoxFit.contain,
     this.padding,
     this.isNetworkImages = false,
@@ -23,7 +22,7 @@ class RoundedImageContainer extends StatelessWidget {
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImages;
