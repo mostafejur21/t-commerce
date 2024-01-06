@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_ecommerce/features/personalization/screen/settings/profile_settings.dart';
 import 'package:t_ecommerce/features/shop/screens/home/home_page.dart';
 import 'package:t_ecommerce/features/shop/screens/store/store_screen.dart';
 import 'package:t_ecommerce/features/shop/screens/wishlist/wish_list.dart';
@@ -41,5 +42,5 @@ class BottomNavigationMenu extends StatelessWidget {
 
 class BottomNavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screen = [const HomePage(), const StoreScreen(), const WishListScreen(), const HomePage()];
+  final screen = [const HomePage(), const StoreScreen(), const WishListScreen(), const SettingsScreen()];
 }
