@@ -1,17 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:t_ecommerce/common/style/shadow_style.dart';
-import 'package:t_ecommerce/common/widgets/brand_text_with_verify_icon.dart';
-import 'package:t_ecommerce/common/widgets/custom_shape/custom_container/circular_container.dart';
-import 'package:t_ecommerce/common/widgets/images/rounded_image.dart';
-import 'package:t_ecommerce/common/widgets/products_title_text.dart';
-import 'package:t_ecommerce/utils/constants/colors.dart';
-import 'package:t_ecommerce/utils/constants/image_strings.dart';
-import 'package:t_ecommerce/utils/constants/sizes.dart';
-import 'package:t_ecommerce/utils/helpers/helper_functions.dart';
+import "package:t_ecommerce/exports.dart";
+import "package:t_ecommerce/features/shop/screens/products_details/profile_details_screen.dart";
 
-import 'circular_wish_icon.dart';
-import 'custom_price_text.dart';
 
 class ProductsCartVertical extends StatelessWidget {
   const ProductsCartVertical({super.key});
@@ -20,7 +9,7 @@ class ProductsCartVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(()=> const ProductsDetailsScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

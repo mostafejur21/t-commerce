@@ -13,5 +13,15 @@ export '../../utils/device/device_utility.dart';
 export 'package:t_ecommerce/common/widgets/brand_text.dart';
 export 'package:t_ecommerce/utils/constants/enums.dart';
 export 'package:t_ecommerce/common/widgets/images/circular_images.dart';
+export 'package:get/get.dart';
+export "package:t_ecommerce/common/style/shadow_style.dart";
+export "package:t_ecommerce/common/widgets/brand_text_with_verify_icon.dart";
+export "package:t_ecommerce/common/widgets/circular_wish_icon.dart";
+export "package:t_ecommerce/common/widgets/custom_price_text.dart";
+export "package:t_ecommerce/common/widgets/custom_shape/custom_container/circular_container.dart";
+export "package:t_ecommerce/common/widgets/images/rounded_image.dart";
+export "package:t_ecommerce/common/widgets/products_title_text.dart";
+export 'package:t_ecommerce/common/widgets/custom_shape/custom_clip_shape_widgets.dart';
+
 
 
