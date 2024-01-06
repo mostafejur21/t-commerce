@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_ecommerce/features/personalization/screen/profile/profile.dart';
 import '../../utils/constants/image_strings.dart';
 import 'images/circular_images.dart';
 
@@ -14,7 +16,7 @@ class CustomUserProfileTile extends StatelessWidget {
       leading: const CircularImage(image: TImages.user, width: 50, height: 50,padding: 0,),
       title: Text("Mostafejur Rahman", style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),
       subtitle: Text("test@gmail.com", style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white),),
-      trailing: IconButton(onPressed: (){}, icon: const Icon(Iconsax.edit, color: Colors.white,),),
+      trailing: IconButton(onPressed: (){Get.to(()=> const UserProfileDetails());}, icon: const Icon(Iconsax.edit, color: Colors.white,),),
     );
   }
 }

@@ -12,4 +12,6 @@ export 'package:t_ecommerce/utils/constants/image_strings.dart';
 export '../../utils/device/device_utility.dart';
 export 'package:t_ecommerce/common/widgets/brand_text.dart';
 export 'package:t_ecommerce/utils/constants/enums.dart';
+export 'package:t_ecommerce/common/widgets/images/circular_images.dart';
+
 
