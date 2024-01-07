@@ -4,8 +4,8 @@ import 'package:t_ecommerce/utils/helpers/helper_functions.dart';
 
 import '../../utils/constants/colors.dart';
 
-class CircularHeartIconButton extends StatelessWidget {
-  const CircularHeartIconButton({
+class CircularIconButton extends StatelessWidget {
+  const CircularIconButton({
     super.key,
     this.width,
     this.height,

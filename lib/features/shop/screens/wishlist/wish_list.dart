@@ -20,7 +20,7 @@ class WishListScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         actions: [
-          CircularHeartIconButton(
+          CircularIconButton(
             icon: Iconsax.add,
             onPressed: () => Get.to(() => const HomePage()),
           )

@@ -1,5 +1,5 @@
 import "package:t_ecommerce/exports.dart";
-import "package:t_ecommerce/features/shop/screens/products_details/profile_details_screen.dart";
+import "package:t_ecommerce/features/shop/screens/products_details/product_details_screen.dart";
 
 
 class ProductsCartVertical extends StatelessWidget {
@@ -49,7 +49,7 @@ class ProductsCartVertical extends StatelessWidget {
                   const Positioned(
                     top: 0,
                     right: 0,
-                    child: CircularHeartIconButton(
+                    child: CircularIconButton(
                       icon: Iconsax.heart5,
                       color: Colors.red,
                     ),
