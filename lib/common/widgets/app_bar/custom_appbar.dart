@@ -1,4 +1,3 @@
-import 'package:get/get.dart';
 import 'package:t_ecommerce/exports.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {

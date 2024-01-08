@@ -25,6 +25,7 @@ class CustomBottomAddToCart extends StatelessWidget {
                 icon: Iconsax.minus,
                 height: 40,
                 width: 40,
+                size: TSizes.md,
                 color: Colors.white,
                 backgroundColor: TColors.darkGrey,
                 onPressed: () {},
@@ -43,6 +44,7 @@ class CustomBottomAddToCart extends StatelessWidget {
                 icon: Iconsax.add,
                 height: 40,
                 width: 40,
+                size: TSizes.md,
                 color: Colors.white,
                 backgroundColor: TColors.black,
                 onPressed: () {},
@@ -59,7 +61,9 @@ class CustomBottomAddToCart extends StatelessWidget {
             child: const Row(
               children: [
                 Icon(Iconsax.shopping_cart),
-                SizedBox(width: TSizes.spaceBtwItems / 2,),
+                SizedBox(
+                  width: TSizes.spaceBtwItems / 2,
+                ),
                 Text("Add to cart"),
               ],
             ),

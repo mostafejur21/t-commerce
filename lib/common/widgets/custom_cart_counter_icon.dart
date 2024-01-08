@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-
+import 'package:t_ecommerce/exports.dart';
 class CustomCartCounterIcon extends StatelessWidget {
   const CustomCartCounterIcon({
     super.key,
@@ -16,7 +14,7 @@ class CustomCartCounterIcon extends StatelessWidget {
       children: [
         IconButton(
           icon: Icon(
-            Iconsax.shopping_cart,
+            Iconsax.shopping_bag,
             color: iconColor,
           ),
           onPressed: onPressed,
