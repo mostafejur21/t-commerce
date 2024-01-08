@@ -56,7 +56,13 @@ class CustomBottomAddToCart extends StatelessWidget {
               backgroundColor: TColors.black,
               side: const BorderSide(color: TColors.black),
             ),
-            child: const Text("Add to cart"),
+            child: const Row(
+              children: [
+                Icon(Iconsax.shopping_cart),
+                SizedBox(width: TSizes.spaceBtwItems / 2,),
+                Text("Add to cart"),
+              ],
+            ),
           ),
         ],
       ),

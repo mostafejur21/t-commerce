@@ -5,6 +5,7 @@ import 'package:t_ecommerce/features/shop/screens/products_details/widgets/produ
 import 'package:t_ecommerce/features/shop/screens/products_details/widgets/products_details_image_slider.dart';
 import 'package:t_ecommerce/features/shop/screens/products_details/widgets/products_meta_data.dart';
 import 'package:t_ecommerce/features/shop/screens/products_details/widgets/rating_and_share.dart';
+import 'package:t_ecommerce/features/shop/screens/products_rating/products_rating_screen.dart';
 
 class ProductsDetailsScreen extends StatelessWidget {
   const ProductsDetailsScreen({super.key});
@@ -69,7 +70,7 @@ class ProductsDetailsScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const SectionHeader(title: "Review (199)"),
-                      IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_3, size: 18,),),
+                      IconButton(onPressed: (){Get.to(()=> const ProductsRatingScreen());}, icon: const Icon(Iconsax.arrow_right_3, size: 18,),),
                     ],
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections,),
