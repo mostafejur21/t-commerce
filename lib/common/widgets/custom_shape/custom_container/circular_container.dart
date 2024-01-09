@@ -4,8 +4,8 @@ import 'package:t_ecommerce/utils/constants/sizes.dart';
 
 import '../../../../utils/constants/colors.dart';
 
-class CircularContainer extends StatelessWidget {
-  const CircularContainer({
+class CustomRoundedContainer extends StatelessWidget {
+  const CustomRoundedContainer({
     super.key,
     this.height,
     this.width,

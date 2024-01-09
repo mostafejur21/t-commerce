@@ -13,7 +13,7 @@ class BrandShowcase extends StatelessWidget {
   final List<String> images;
   @override
   Widget build(BuildContext context) {
-    return CircularContainer(
+    return CustomRoundedContainer(
       padding: const EdgeInsets.all(TSizes.md),
       showBorder: true,
       borderColor: TColors.darkGrey,
@@ -35,7 +35,7 @@ class BrandShowcase extends StatelessWidget {
 
 Widget brandTopProductsImagesWidget(String image, context) {
   return Expanded(
-    child: CircularContainer(
+    child: CustomRoundedContainer(
       height: 100,
       backgroundColor: THelperFunctions.isDarkMode(context)
           ? TColors.darkerGrey

@@ -65,7 +65,7 @@ class UserReview extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwItems,
         ),
-        CircularContainer(
+        CustomRoundedContainer(
           backgroundColor: THelperFunctions.isDarkMode(context)
               ? TColors.darkerGrey
               : TColors.grey,

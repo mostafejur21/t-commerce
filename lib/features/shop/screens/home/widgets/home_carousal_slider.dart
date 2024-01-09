@@ -33,7 +33,7 @@ class HomeSlider extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 for (int i = 0; i < banners.length; i++)
-                  CircularContainer(
+                  CustomRoundedContainer(
                     height: 5,
                     width: 20,
                     margin: const EdgeInsets.only(right: 10),

@@ -21,14 +21,14 @@ class PrimaryHeader extends StatelessWidget {
             Positioned(
               top: -150,
               right: -250,
-              child: CircularContainer(
+              child: CustomRoundedContainer(
                 backgroundColor: TColors.white.withOpacity(0.1),
               ),
             ),
             Positioned(
               top: 100,
               right: -300,
-              child: CircularContainer(
+              child: CustomRoundedContainer(
                 backgroundColor: TColors.white.withOpacity(0.1),
               ),
             ),

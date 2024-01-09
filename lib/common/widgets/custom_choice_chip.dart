@@ -26,7 +26,7 @@ class CustomChoiceChip extends StatelessWidget {
           color: selected ? TColors.white : null,
         ),
         avatar: isColor
-            ? CircularContainer(
+            ? CustomRoundedContainer(
           width: 50,
           height: 50,
           backgroundColor: THelperFunctions.getColor(text)!,

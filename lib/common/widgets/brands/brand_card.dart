@@ -22,7 +22,7 @@ final void Function()? onTap;
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
-      child: CircularContainer(
+      child: CustomRoundedContainer(
         padding: const EdgeInsets.all(TSizes.sm),
         showBorder: showBorder,
         backgroundColor: Colors.transparent,

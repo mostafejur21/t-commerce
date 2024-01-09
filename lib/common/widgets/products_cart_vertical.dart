@@ -20,7 +20,7 @@ class ProductsCartVertical extends StatelessWidget {
         ),
         child: Column(
           children: [
-            CircularContainer(
+            CustomRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
@@ -32,7 +32,7 @@ class ProductsCartVertical extends StatelessWidget {
                   ),
                   Positioned(
                     top: 12,
-                    child: CircularContainer(
+                    child: CustomRoundedContainer(
                       radius: TSizes.sm,
                       backgroundColor: TColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(

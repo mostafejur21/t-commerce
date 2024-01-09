@@ -9,7 +9,7 @@ class ProductsAttribute extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
     return Column(
       children: [
-        CircularContainer(
+        CustomRoundedContainer(
           padding: const EdgeInsets.all(TSizes.md),
           backgroundColor: dark ? TColors.darkerGrey : TColors.grey,
           child: Column(

@@ -11,7 +11,7 @@ class ProductsMetaData extends StatelessWidget {
       children: [
         Row(
           children: [
-            CircularContainer(
+            CustomRoundedContainer(
               radius: TSizes.sm,
               backgroundColor: TColors.secondary.withOpacity(0.8),
               padding: const EdgeInsets.symmetric(

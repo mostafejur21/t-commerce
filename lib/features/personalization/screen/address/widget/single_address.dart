@@ -8,7 +8,7 @@ class SingleAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    return CircularContainer(
+    return CustomRoundedContainer(
       width: double.infinity,
       padding: const EdgeInsets.all(TSizes.md),
       showBorder: true,
