@@ -1,5 +1,6 @@
 import 'package:t_ecommerce/exports.dart';
 import 'package:t_ecommerce/features/personalization/screen/address/address.dart';
+import 'package:t_ecommerce/features/shop/screens/orders/order_screen.dart';
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
@@ -54,7 +55,9 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: "My Order",
                     subTitle: "In-Progress or complete orders",
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const OrderScreen());
+                    },
                   ),
                   SettingMenuTile(
                     icon: Iconsax.bank,
