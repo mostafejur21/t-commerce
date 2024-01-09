@@ -1,14 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_ecommerce/common/widgets/custom_search_bar.dart';
-import 'package:t_ecommerce/common/widgets/custom_shape/custom_container/primary_header_container.dart';
 import 'package:t_ecommerce/common/widgets/products_cart_vertical.dart';
-import 'package:t_ecommerce/common/widgets/section_heading.dart';
+import 'package:t_ecommerce/exports.dart';
+import 'package:t_ecommerce/features/shop/screens/all_products/all_products_screen.dart';
 import 'package:t_ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_ecommerce/features/shop/screens/home/widgets/home_carousal_slider.dart';
 import 'package:t_ecommerce/features/shop/screens/home/widgets/home_category_list_view.dart';
-import 'package:t_ecommerce/utils/constants/image_strings.dart';
-import 'package:t_ecommerce/utils/constants/sizes.dart';
+
 import '../../../../common/widgets/custom_grid_view.dart';
 
 class HomePage extends StatelessWidget {
@@ -64,6 +61,8 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
+                  SectionHeader(title: "Popular Products", showButton: true, onPressed: () => Get.to(() => const AllProducts()),),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
                   CustomGridView(
                     itemCount: 4,
                     itemBuilder: (_, index) {
