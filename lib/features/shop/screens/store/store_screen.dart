@@ -1,15 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:t_ecommerce/common/widgets/app_bar/custom_appbar.dart';
 import 'package:t_ecommerce/common/widgets/app_bar/custom_tab_bar.dart';
 import 'package:t_ecommerce/common/widgets/brands/brand_card.dart';
 import 'package:t_ecommerce/common/widgets/custom_cart_counter_icon.dart';
 import 'package:t_ecommerce/common/widgets/custom_grid_view.dart';
 import 'package:t_ecommerce/common/widgets/custom_search_bar.dart';
-import 'package:t_ecommerce/common/widgets/section_heading.dart';
+import 'package:t_ecommerce/exports.dart';
+import 'package:t_ecommerce/features/shop/screens/brands/all_brands.dart';
 import 'package:t_ecommerce/features/shop/screens/store/widgets/category_tab.dart';
-import 'package:t_ecommerce/utils/constants/colors.dart';
-import 'package:t_ecommerce/utils/constants/sizes.dart';
-import 'package:t_ecommerce/utils/helpers/helper_functions.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -53,10 +49,10 @@ class StoreScreen extends StatelessWidget {
                         padding: EdgeInsets.zero,
                       ),
                       const SizedBox(height: TSizes.spaceBtwSections),
-                      const SectionHeader(
+                      SectionHeader(
                         title: "Featured Brands",
                         showButton: true,
-                        onPressed: null,
+                        onPressed: () => Get.to(() => const AllBrands()),
                       ),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
                       CustomGridView(
