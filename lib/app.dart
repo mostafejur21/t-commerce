@@ -1,3 +1,4 @@
+import 'package:t_ecommerce/bindings/general_bindings.dart';
 import 'package:t_ecommerce/exports.dart';
 import 'package:t_ecommerce/utils/theme/theme.dart';
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       home: const Scaffold(backgroundColor: TColors.primary, body: Center(child: CircularProgressIndicator(),),),
     );
   }
