@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:t_ecommerce/features/authentication/controllers/signup_controller.dart';
 
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
@@ -19,13 +21,15 @@ class PrivacyAndCheckBox extends StatelessWidget {
         SizedBox(
           width: 24,
           height: 24,
-          child: Checkbox(
-            value: true,
-            onChanged: (value) {},
+          child: Obx(
+            () => Checkbox(
+                value: SignupController.instance.privacyPolicy.value,
+                onChanged: (value) => SignupController.instance.privacyPolicy
+                    .value = !SignupController.instance.privacyPolicy.value),
           ),
         ),
         const SizedBox(
-          width: TSizes.spaceBtwItems,
+          width: TSizes.spaceBtwItems / 2,
         ),
         RichText(
           text: TextSpan(

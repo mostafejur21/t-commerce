@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_ecommerce/common/widgets/login_or_signup/login_divider.dart';
 import 'package:t_ecommerce/common/widgets/login_or_signup/login_social_button.dart';
-import 'package:t_ecommerce/features/authentication/screen/signup/verify_email_screen.dart';
+import 'package:t_ecommerce/features/authentication/controllers/signup_controller.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/widgets/agree_t&c.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/widgets/signup_form.dart';
 import 'package:t_ecommerce/utils/constants/sizes.dart';
@@ -13,6 +13,7 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put((SignupController()));
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -46,7 +47,7 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                  onPressed: () => controller.signup(),
                   child: Text(TTexts.createAccount.toUpperCase()),
                 ),
               ),
