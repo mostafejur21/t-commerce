@@ -29,6 +29,9 @@ dependencies:
   capped_progress_indicator: ^0.0.2
   cupertino_icons: ^1.0.6
 
+  #Firebase
+  firebase_core: ^2.24.2
+
 
 dev_dependencies:
   flutter_test:
