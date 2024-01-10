@@ -7,7 +7,7 @@ class BrandProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: CustomAppbar(title: Text("Nike"), showBackButton: true,),
       body: SingleChildScrollView(
         child: Padding(
