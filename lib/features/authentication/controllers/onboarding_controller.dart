@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:t_ecommerce/features/authentication/screen/login/login_screen.dart';
 
 class OnboardingController extends GetxController {
@@ -17,6 +18,7 @@ class OnboardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == 2) {
+      GetStorage().write("IsFirstTime", false);
       Get.off(() => const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
