@@ -6,9 +6,8 @@ import 'package:t_ecommerce/data/repositories/user_data/user_repository.dart';
 import 'package:t_ecommerce/features/authentication/models/user_model.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/verify_email_screen.dart';
 import 'package:t_ecommerce/utils/constants/image_strings.dart';
-import 'package:t_ecommerce/utils/popup/full_screen_loader.dart';
-import 'package:t_ecommerce/utils/popup/loader.dart';
-
+import 'package:t_ecommerce/utils/popup_and_loader/full_screen_loader.dart';
+import 'package:t_ecommerce/utils/popup_and_loader/loader.dart';
 class SignupController extends GetxController {
   static SignupController get instance => Get.find();
 
