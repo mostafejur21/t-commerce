@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_ecommerce/features/authentication/controllers/signup_controller.dart';
+import 'package:t_ecommerce/features/authentication/controllers/signup_controller/signup_controller.dart';
 import 'package:t_ecommerce/utils/validators/validation.dart';
 
 import '../../../../../utils/constants/sizes.dart';

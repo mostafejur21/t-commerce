@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_ecommerce/common/widgets/login_or_signup/login_divider.dart';
 import 'package:t_ecommerce/common/widgets/login_or_signup/login_social_button.dart';
-import 'package:t_ecommerce/features/authentication/controllers/signup_controller.dart';
+import 'package:t_ecommerce/features/authentication/controllers/signup_controller/signup_controller.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/widgets/agree_t&c.dart';
 import 'package:t_ecommerce/features/authentication/screen/signup/widgets/signup_form.dart';
 import 'package:t_ecommerce/utils/constants/sizes.dart';
