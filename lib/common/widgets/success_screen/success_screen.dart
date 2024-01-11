@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:t_ecommerce/common/style/spacing_style.dart';
 import 'package:t_ecommerce/utils/constants/sizes.dart';
 import 'package:t_ecommerce/utils/constants/text_strings.dart';
@@ -17,7 +18,7 @@ class SuccessScreen extends StatelessWidget {
           padding: TSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
-              Image.asset(
+              Lottie.asset(
                 images,
                 width: THelperFunctions.screenWidth() * 0.6,
               ),

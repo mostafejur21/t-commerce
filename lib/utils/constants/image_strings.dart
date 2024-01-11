@@ -41,8 +41,21 @@ class TImages {
   static const String staticSuccessIllustration = "assets/images/animations/sammy-line-success.png";
   static const String deliveredInPlaneIllustration = "assets/images/animations/sammy-line-come-back-later.png";
   static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-man-receives-a-mail.png";
-  static const String verifyIllustration = "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
   static const String successAnimation = "assets/images/animations/loading_success_animation.gif";
+
+  //-- Lottie Animation
+  static const String verifyIllustration = "assets/images/animations/docer_processing.json";
+  static const String successfulRegistrationAnimation = 'assets/images/animations/successfullyRegistrationAnimation.json';
+  static const String cartAnimation = "assets/images/animations/lady_adding_products_in_cart.json";
+  static const String orderCompleteAnimation = "assets/images/animations/order_complete_car_drive.json";
+  static const String packageAnimation = "assets/images/animations/packaging-in-progress.json";
+  static const String paperPlaneAnimation = "assets/images/animations/paper_plane.json";
+  static const String carRider = "assets/images/animations/car_animation.json";
+  static const String thankYouAnimation = "assets/images/animations/thank-you.json";
+  static const String paymentSuccessfullyAnimation = "assets/images/animations/payment_done.json";
+  static const String loaderAnimation = "assets/images/animations/loader.json";
+
+
 
   // -- OnBoarding Texts
   static const String onBoardingImage1 = "assets/images/on_boarding_images/sammy-line-searching.gif";
