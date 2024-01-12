@@ -87,6 +87,7 @@ class SignupForm extends StatelessWidget {
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),
+          /// Password
           Obx(
             () => TextFormField(
               obscureText: controller.hidePassword.value,
