@@ -20,7 +20,7 @@ class LoginController extends GetxController {
   Future<void> emailAndPasswordSignIn() async {
     try {
       CustomFullScreenLoader.openLoadingDialog(
-          "We are processing your information...", TImages.verifyIllustration);
+          "We are processing your information...", TImages.docerAnimation);
 
       ///check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
