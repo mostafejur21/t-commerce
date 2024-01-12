@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:t_ecommerce/common/widgets/network_manager.dart';
 import 'package:t_ecommerce/data/repositories/authentication/authentication_repository.dart';
+import 'package:t_ecommerce/features/personalization/controller/user_controller.dart';
 import 'package:t_ecommerce/utils/constants/image_strings.dart';
 import 'package:t_ecommerce/utils/popup_and_loader/full_screen_loader.dart';
 import 'package:t_ecommerce/utils/popup_and_loader/loader.dart';
@@ -15,6 +16,14 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
+
+  @override
+  void onInit() {
+    email.text = localStorage.read("REMEMBER_EMAIL");
+    password.text = localStorage.read("REMEMBER_PASSWORD");
+    super.onInit();
+  }
 
   /// Email and password sign in
   Future<void> emailAndPasswordSignIn() async {
@@ -50,6 +59,36 @@ class LoginController extends GetxController {
     } catch (e) {
       CustomFullScreenLoader.stopLoading();
       CustomLoader.errorSnackBar(title: "Oh snap!", message: e.toString());
+    }
+  }
+
+  /// Google sign in
+  Future<void> googleSignIn() async {
+    try {
+      // start loader
+      CustomFullScreenLoader.openLoadingDialog(
+          "We are processing your information...", TImages.docerAnimation);
+      // check internet connectivity
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        CustomFullScreenLoader.stopLoading();
+        return;
+      }
+      // login using google
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      // save user data to firebase Fire store
+      await userController.saveUserRecord(userCredentials);
+
+      // remove loader
+      CustomFullScreenLoader.stopLoading();
+
+      // Redirect
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      CustomFullScreenLoader.stopLoading();
+      CustomLoader.errorSnackBar(title: 'Oh snap!', message: e.toString());
     }
   }
 }
