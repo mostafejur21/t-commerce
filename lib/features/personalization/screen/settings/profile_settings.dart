@@ -1,6 +1,8 @@
+import 'package:t_ecommerce/data/repositories/authentication/authentication_repository.dart';
 import 'package:t_ecommerce/exports.dart';
 import 'package:t_ecommerce/features/personalization/screen/address/address.dart';
 import 'package:t_ecommerce/features/shop/screens/orders/order_screen.dart';
+
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
@@ -42,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
                     title: "My Address",
                     subTitle: "Set shop delivery address",
                     onTap: () {
-                      Get.to(()=> const UserAddressScreen());
+                      Get.to(() => const UserAddressScreen());
                     },
                   ),
                   SettingMenuTile(
@@ -122,12 +124,20 @@ class SettingsScreen extends StatelessWidget {
                       onChanged: (value) {},
                     ),
                   ),
-
-                  const SizedBox(height: TSizes.spaceBtwSections,),
-                  SizedBox(width: double.infinity, child: OutlinedButton(onPressed: (){}, child: const Text("Logout"),),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections * 2.5,),
-
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () =>
+                          AuthenticationRepository.instance.logout(),
+                      child: const Text("Logout"),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections * 2.5,
+                  ),
                 ],
               ),
             ),
