@@ -20,16 +20,17 @@ class LoginController extends GetxController {
 
   @override
   void onInit() {
-    email.text = localStorage.read("REMEMBER_EMAIL");
-    password.text = localStorage.read("REMEMBER_PASSWORD");
+    if (localStorage.read('REMEMBER_ME_EMAIL') != null) {
+      email.text = localStorage.read('REMEMBER_ME_EMAIL');
+      password.text = localStorage.read('REMEMBER_ME_PASSWORD');
+    }
     super.onInit();
   }
 
   /// Email and password sign in
   Future<void> emailAndPasswordSignIn() async {
     try {
-      CustomFullScreenLoader.openLoadingDialog(
-          "We are processing your information...", TImages.docerAnimation);
+      CustomFullScreenLoader.openLoadingDialog("We are processing your information...", TImages.docerAnimation);
 
       ///check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -48,8 +49,7 @@ class LoginController extends GetxController {
       localStorage.write("REMEMBER_EMAIL", email.text.trim());
       localStorage.write("REMEMBER_PASSWORD", password.text.trim());
       // login using email and password
-      await AuthenticationRepository.instance
-          .signInWithEmailAndPassword(email.text.trim(), password.text.trim());
+      await AuthenticationRepository.instance.signInWithEmailAndPassword(email.text.trim(), password.text.trim());
 
       //remove loader
       CustomFullScreenLoader.stopLoading();
@@ -66,8 +66,7 @@ class LoginController extends GetxController {
   Future<void> googleSignIn() async {
     try {
       // start loader
-      CustomFullScreenLoader.openLoadingDialog(
-          "We are processing your information...", TImages.docerAnimation);
+      CustomFullScreenLoader.openLoadingDialog("We are processing your information...", TImages.docerAnimation);
       // check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {
@@ -75,8 +74,7 @@ class LoginController extends GetxController {
         return;
       }
       // login using google
-      final userCredentials =
-          await AuthenticationRepository.instance.signInWithGoogle();
+      final userCredentials = await AuthenticationRepository.instance.signInWithGoogle();
 
       // save user data to firebase Fire store
       await userController.saveUserRecord(userCredentials);
